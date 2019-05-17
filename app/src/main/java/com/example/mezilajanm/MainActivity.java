@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.mezilajanm.fragments.BankAtmFragment;
 import com.example.mezilajanm.fragments.HomeFragment;
+import com.example.mezilajanm.fragments.TestFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNavigationView;
@@ -32,12 +34,16 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.action_home:
-                        //Fragment home=new HomeFragment();
-                        // setFragment(home);
+                        Fragment home = new HomeFragment();
+                        setFragment(home);
                         return true;
                     case R.id.action_bank:
+                        Fragment bank = new BankAtmFragment();
+                        setFragment(bank);
                         return true;
                     case R.id.action_info:
+                        Fragment test= new TestFragment();
+                        setFragment(test);
                         return true;
 
                     default:
